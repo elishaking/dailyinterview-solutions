@@ -178,6 +178,9 @@ function reversRecursively(head) {
 // console.log(reversRecursively(list));
 
 /**
+ * You are given a list of numbers, and a target number k. Return whether or not
+ * there are two numbers in the list that add up to k.
+ *
  * @param {number[]} arr
  * @param {number} target
  */
@@ -199,6 +202,8 @@ function twoSum(arr, target) {
 // console.log(twoSum([4, 7, 1, -3, 2], 5));
 
 /**
+ * You are given an array of integers in an arbitrary order. Return whether or
+ * not it is possible to make the array non-decreasing by modifying at most 1 element to any value.
  *
  * @param {number[]} arr
  */
