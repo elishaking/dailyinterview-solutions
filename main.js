@@ -228,4 +228,6 @@ function check(arr) {
  *
  * @param {TreeNode} rootNode
  */
-function floorAndCeilOfBST(rootNode) {}
+function floorAndCeilOfBST(rootNode) {
+  const treeValues = new BinarySearchTree(rootNode).inOrderTraversal();
+}
