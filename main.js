@@ -251,4 +251,10 @@ const bst = new BinarySearchTree()
   .insert(6)
   .insert(7);
 
-console.log(floorAndCeilOfBST(bst.root, 6));
+// console.log(floorAndCeilOfBST(bst.root, 6));
+
+/**
+ *
+ * @param {TreeNode} rootNode
+ */
+function invertBinaryTree(rootNode) {}
