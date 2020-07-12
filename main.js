@@ -221,3 +221,11 @@ function check(arr) {
 
 // console.log(check([13, 4, 7]));
 // console.log(check([5, 1, 3, 2, 5]));
+
+/**
+ * Given an integer k and a binary search tree, find the floor (less than or equal to) of k,
+ * and the ceiling (larger than or equal to) of k. If either does not exist, then print them as None.
+ *
+ * @param {TreeNode} rootNode
+ */
+function floorAndCeilOfBST(rootNode) {}

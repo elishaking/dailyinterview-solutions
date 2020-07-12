@@ -20,10 +20,10 @@ class BinarySearchTree {
   }
 
   /**
-   * @param {TreeNode} node
+   * @param {TreeNode | number} node
    */
   insert(node) {
-    if (node instanceof Number) node = new TreeNode(node);
+    if (typeof node === "number") node = new TreeNode(node);
 
     let currentNode = this.root;
     if (currentNode === null) {
@@ -49,4 +49,32 @@ class BinarySearchTree {
       }
     }
   }
+
+  inOrderTraversal() {
+    const values = [];
+
+    /**
+     * @param {TreeNode} node
+     */
+    const traverse = (node) => {
+      if (node === null) return;
+
+      traverse(node.left);
+      values.push(node.value);
+      traverse(node.right);
+    };
+
+    traverse(this.root);
+
+    return values;
+  }
 }
+
+function main() {
+  const bst = new BinarySearchTree();
+  bst.insert(10).insert(20).insert(5).insert(6).insert(7);
+
+  console.log(bst.inOrderTraversal());
+}
+
+main();
