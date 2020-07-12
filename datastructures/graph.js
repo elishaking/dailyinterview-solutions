@@ -20,10 +20,11 @@ class BinarySearchTree {
   }
 
   /**
-   * @param {TreeNode | number} node
+   * @param {TreeNode | number | string} node
    */
   insert(node) {
-    if (typeof node === "number") node = new TreeNode(node);
+    if (typeof node === "number" || typeof node === "string")
+      node = new TreeNode(node);
 
     let currentNode = this.root;
     if (currentNode === null) {

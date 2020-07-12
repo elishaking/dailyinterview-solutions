@@ -257,4 +257,17 @@ const bst = new BinarySearchTree()
  *
  * @param {TreeNode} rootNode
  */
-function invertBinaryTree(rootNode) {}
+function invertBinaryTree(rootNode) {
+  if (rootNode === null) return;
+
+  let temp = rootNode.left;
+  rootNode.left = rootNode.right;
+  rootNode.right = temp;
+
+  invertBinaryTree(rootNode.left);
+  invertBinaryTree(rootNode.right);
+}
+
+console.log(bst.preOrderTraversal());
+invertBinaryTree(bst.root);
+console.log(bst.preOrderTraversal());
