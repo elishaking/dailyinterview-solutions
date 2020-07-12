@@ -1,4 +1,5 @@
 const { BinarySearchTree, TreeNode } = require("./datastructures/graph");
+const { MaxStack } = require("./datastructures/stack");
 const { binarySearch } = require("./algorithms/search");
 
 /**
@@ -270,6 +271,6 @@ function invertBinaryTree(rootNode) {
   invertBinaryTree(rootNode.right);
 }
 
-console.log(bst.preOrderTraversal());
-invertBinaryTree(bst.root);
-console.log(bst.preOrderTraversal());
+// console.log(bst.preOrderTraversal());
+// invertBinaryTree(bst.root);
+// console.log(bst.preOrderTraversal());
