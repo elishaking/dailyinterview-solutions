@@ -77,4 +77,12 @@ function main() {
   console.log(bst.inOrderTraversal());
 }
 
-main();
+// @ts-ignore
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  TreeNode,
+  BinarySearchTree,
+};

@@ -1,3 +1,6 @@
+const { BinarySearchTree, TreeNode } = require("./datastructures/graph");
+const { binarySearch } = require("./algorithms/search");
+
 /**
  * Given a string, find the length of the longest substring without repeating characters.
  *
@@ -226,8 +229,26 @@ function check(arr) {
  * Given an integer k and a binary search tree, find the floor (less than or equal to) of k,
  * and the ceiling (larger than or equal to) of k. If either does not exist, then print them as None.
  *
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ *
  * @param {TreeNode} rootNode
+ * @param {number} k
  */
-function floorAndCeilOfBST(rootNode) {
+function floorAndCeilOfBST(rootNode, k) {
   const treeValues = new BinarySearchTree(rootNode).inOrderTraversal();
+  const idx = binarySearch(treeValues, k);
+
+  if (idx === -1 || idx === 0 || idx === treeValues.length - 1) return null;
+
+  return [treeValues[idx - 1], treeValues[idx + 1]];
 }
+
+const bst = new BinarySearchTree()
+  .insert(10)
+  .insert(20)
+  .insert(5)
+  .insert(6)
+  .insert(7);
+
+console.log(floorAndCeilOfBST(bst.root, 6));

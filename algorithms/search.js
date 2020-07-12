@@ -13,7 +13,6 @@ function binarySearch(arr, target) {
 
   while (high >= low) {
     const mid = Math.floor((high + low) / 2);
-    console.log(mid);
 
     if (arr[mid] === target) return mid;
 
@@ -28,4 +27,11 @@ function main() {
   console.log(binarySearch([1, 2, 3, 4, 5, 6], 6));
 }
 
-main();
+// @ts-ignore
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  binarySearch,
+};
