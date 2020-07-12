@@ -254,6 +254,8 @@ const bst = new BinarySearchTree()
 // console.log(floorAndCeilOfBST(bst.root, 6));
 
 /**
+ * You are given the root of a binary tree. Invert the binary tree in place.
+ * That is, all left children should become right children, and all right children should become left children.
  *
  * @param {TreeNode} rootNode
  */
