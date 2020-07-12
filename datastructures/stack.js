@@ -11,10 +11,12 @@ class MaxStack {
       currentMax = value > prevMax ? value : prevMax;
     }
 
-    this.push({
+    this.values.push({
       value,
       max: currentMax,
     });
+
+    return this;
   }
 
   pop() {

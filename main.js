@@ -274,3 +274,26 @@ function invertBinaryTree(rootNode) {
 // console.log(bst.preOrderTraversal());
 // invertBinaryTree(bst.root);
 // console.log(bst.preOrderTraversal());
+
+/**
+ * Implement a class for a stack that supports all the regular functions (push, pop)
+ * and an additional function of max() which returns the maximum element in the stack
+ * (return None if the stack is empty). Each method should run in constant time.
+ *
+ * Time Complexity: O(1)
+ * Space Complexity: O(1)
+ *
+ * @param {MaxStack} stack
+ */
+function maxStack(stack) {
+  return stack.max();
+}
+
+const stack = new MaxStack()
+  .push(10)
+  .push(5)
+  .push(7)
+  .push(15)
+  .push(-100)
+  .push(0);
+console.log(maxStack(stack));
