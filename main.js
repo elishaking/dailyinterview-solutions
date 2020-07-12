@@ -219,5 +219,5 @@ function check(arr) {
   return true;
 }
 
-console.log(check([13, 4, 7]));
-console.log(check([5, 1, 3, 2, 5]));
+// console.log(check([13, 4, 7]));
+// console.log(check([5, 1, 3, 2, 5]));
